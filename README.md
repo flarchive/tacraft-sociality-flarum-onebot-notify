@@ -2,13 +2,13 @@
 
 > **Read-only archive of released versions of tacraft-sociality/flarum-onebot-notify.** Not for installation: use [Packagist](https://packagist.org/packages/tacraft-sociality/flarum-onebot-notify) or the [upstream repository](https://github.com/TaCraft-Sociality/flarum-onebot-notify).
 
-**0** versions archived · Latest: [`v1.0.0`](https://github.com/flarchive/tacraft-sociality-flarum-onebot-notify/tree/archive/v1.0.0) · License: `MIT` · Flarum: `^2.0`
+**1** versions archived · Latest: [`v1.0.0`](https://github.com/flarchive/tacraft-sociality-flarum-onebot-notify/tree/archive/v1.0.0) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| — | — | — | — |
+| `v1.0.0` | 2026-10-25 | `^2.0` | [Browse](https://github.com/flarchive/tacraft-sociality-flarum-onebot-notify/tree/archive/v1.0.0) |
 
 Catalog entry: [packages/tacraft-sociality-flarum-onebot-notify.json](https://github.com/flarchive/archive-index/blob/main/packages/tacraft-sociality-flarum-onebot-notify.json)
 
