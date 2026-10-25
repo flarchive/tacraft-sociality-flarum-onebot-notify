@@ -1,0 +1,54 @@
+tacraft-onebot-notify:
+  admin:
+    connection_heading: Connection
+    connection_intro: OneBot HTTP endpoint used to push notifications to QQ.
+    enabled_switch: Enable OneBot notifications
+    enabled_help: When enabled, new discussions and replies are pushed to QQ via OneBot.
+    api_url_label: OneBot API URL
+    api_url_help: Base URL of the OneBot HTTP endpoint, e.g. http://127.0.0.1:5700.
+    access_token_label: Access token
+    access_token_help: Optional. Sent as an Authorization Bearer header. Leave empty if OneBot has no token.
+    target_type_label: Target type
+    target_type_help: Whether to push to a group or to a private chat.
+    target_type_group: Group
+    target_type_private: Private
+    target_id_label: Target group / QQ ID
+    target_id_help: One or more group IDs / QQ numbers separated by commas.
+    use_proxy_switch: Connect through a proxy
+    use_proxy_help: Enable if the OneBot endpoint is only reachable through a proxy.
+    proxy_label: Proxy address
+    proxy_help: Formats socks5://host:port or http://host:port, auth via user:pass@host:port. Requires cURL.
+    test_button: Send test message
+    test_ok: Test message sent
+    test_failed: Failed to send the request
+    delivery_heading: Delivery
+    delivery_intro: What happens when a request to the OneBot API fails.
+    retry_attempts_label: Send attempts
+    retry_attempts_help: Total number of send attempts, including the first one. 1-5, default 2.
+    retry_delay_label: Delay between attempts, seconds
+    retry_delay_help: Pause before each retry. 0-30, default 1. Also applies to the test button.
+    connect_timeout_label: Connection timeout, seconds
+    connect_timeout_help: How long to wait for the connection to the OneBot endpoint. 1-30, default 5.
+    timeout_label: Request timeout, seconds
+    timeout_help: How long to wait for the API response. 1-60, default 10.
+    tags_heading: Tags
+    enabled_tags_help: Only notify about new discussions and replies in the selected tags. Leave empty to notify about everything.
+    enabled_tags_empty: The flarum-tags extension must be enabled to choose tags.
+    templates_heading: Message templates
+    templates_intro: Customize how notifications look in QQ.
+    new_discussion_label: New discussion template
+    new_post_label: New post template
+    placeholders_heading: Available placeholders
+    examples_heading: Examples
+    ex_minimal: just the link
+    ex_compact: compact message
+    ex_full: full card with tags and excerpt
+    ph_title: Discussion title
+    ph_author: Author name
+    ph_excerpt: First ~200 characters of the post content
+    ph_url: Link to the discussion
+    ph_tags: Discussion tags separated by spaces
+    hints_heading: Hints & examples
+    hints_summary: Show placeholders and ready-made templates
+    test_sample_title: Test topic
+    test_sample_excerpt: This is a sample excerpt to preview how your template looks.
