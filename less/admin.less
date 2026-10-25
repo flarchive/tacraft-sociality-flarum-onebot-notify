@@ -1,0 +1,126 @@
+.OneBotNotifySettings {
+  background: var(--control-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  margin: 0 auto;
+
+  .Form-group {
+    margin: 0;
+  }
+
+  &-section {
+    background: var(--body-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px var(--shadow-color);
+    padding: 20px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      color: var(--primary-color);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    textarea.FormControl {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+      min-height: 140px;
+    }
+  }
+
+  &-sectionBody {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .Form-controls {
+    margin-top: 4px;
+  }
+
+  &-hints {
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--control-bg);
+    border-radius: 8px;
+
+    summary {
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--link-color);
+      }
+
+      &::marker {
+        color: var(--muted-color);
+      }
+    }
+
+    h4 {
+      margin: 12px 0 8px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      margin: 0 0 8px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    p {
+      margin: 8px 0 0;
+      font-size: 0.9rem;
+    }
+
+    code {
+      background: var(--body-bg);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 0.85rem;
+    }
+  }
+
+  &-examples {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    pre {
+      display: block;
+      margin: 0;
+      padding: 6px 10px;
+      background: var(--body-bg);
+      border-radius: 4px;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      white-space: pre-wrap;
+    }
+  }
+
+  &-exampleNote {
+    margin-top: 2px;
+    font-size: 0.85rem;
+    color: var(--muted-color);
+  }
+}

@@ -1,0 +1,54 @@
+tacraft-onebot-notify:
+  admin:
+    connection_heading: 连接设置
+    connection_intro: 用于推送 QQ 通知的 OneBot HTTP 接口。
+    enabled_switch: 启用 OneBot 通知
+    enabled_help: 开启后，新主题和新回复会通过 OneBot 推送到 QQ。
+    api_url_label: OneBot API 地址
+    api_url_help: OneBot HTTP 接口的基础地址，例如 http://127.0.0.1:5700。
+    access_token_label: Access Token
+    access_token_help: 可选。会以 Authorization Bearer 请求头发送。若 OneBot 未配置 Token 请留空。
+    target_type_label: 目标类型
+    target_type_help: 选择推送到群组还是私聊。
+    target_type_group: 群组
+    target_type_private: 私聊
+    target_id_label: 目标群号 / QQ 号
+    target_id_help: 一个或多个群号 / QQ 号，多个用英文逗号分隔。
+    use_proxy_switch: 通过代理连接
+    use_proxy_help: 如果服务器只能通过代理访问 OneBot 接口，请开启此项。
+    proxy_label: 代理地址
+    proxy_help: 格式为 socks5://host:port 或 http://host:port，带认证时使用 user:pass@host:port。需要 cURL 支持。
+    test_button: 发送测试消息
+    test_ok: 测试消息已发送
+    test_failed: 请求发送失败
+    delivery_heading: 投递设置
+    delivery_intro: 当请求 OneBot API 失败时的处理方式。
+    retry_attempts_label: 发送尝试次数
+    retry_attempts_help: 包含首次在内的总发送次数。1-5，默认 2。
+    retry_delay_label: 重试间隔（秒）
+    retry_delay_help: 每次重试前的等待时间。0-30，默认 1。测试按钮同样适用。
+    connect_timeout_label: 连接超时（秒）
+    connect_timeout_help: 等待与 OneBot 接口建立连接的时间。1-30，默认 5。
+    timeout_label: 请求超时（秒）
+    timeout_help: 等待 API 响应的最长时间。1-60，默认 10。
+    tags_heading: 标签
+    enabled_tags_help: 仅对所选标签下的新主题和新回复发送通知。留空则通知全部内容。
+    enabled_tags_empty: 需要启用 flarum-tags 扩展才能选择标签。
+    templates_heading: 消息模板
+    templates_intro: 自定义通知在 QQ 中的显示效果。
+    new_discussion_label: 新主题模板
+    new_post_label: 新回复模板
+    placeholders_heading: 可用占位符
+    examples_heading: 示例
+    ex_minimal: 仅链接
+    ex_compact: 紧凑消息
+    ex_full: 含标签和摘要的完整卡片
+    ph_title: 主题标题
+    ph_author: 作者名称
+    ph_excerpt: 帖子内容的前约 200 个字符
+    ph_url: 主题链接
+    ph_tags: 主题标签，以空格分隔
+    hints_heading: 提示与示例
+    hints_summary: 展开查看占位符和现成模板
+    test_sample_title: 测试主题
+    test_sample_excerpt: 这是一段示例摘要，用于预览模板的显示效果。

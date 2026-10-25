@@ -1,0 +1,68 @@
+<?php
+
+namespace TaCraft\FlarumOneBotNotify;
+
+use Flarum\Http\UrlGenerator;
+use Flarum\Post\Event\Posted;
+use Flarum\Settings\SettingsRepositoryInterface;
+
+class NewPostListener
+{
+    public function __construct(
+        private readonly OneBotNotifier $notifier,
+        private readonly UrlGenerator $url,
+        private readonly SettingsRepositoryInterface $settings,
+        private readonly TagFilter $tagFilter,
+    ) {}
+
+    public function handle(Posted $event): void
+    {
+        $post = $event->post;
+        $discussion = $post->discussion;
+
+        if ($discussion === null) {
+            return;
+        }
+
+        if ($post->number === 1) {
+            return;
+        }
+
+        if (!$this->tagFilter->shouldNotify($discussion)) {
+            return;
+        }
+
+        $title = $discussion->title;
+
+        $user = $post->user;
+        $authorName = $user?->display_name ?? 'Unknown';
+
+        $excerpt = TemplateRenderer::excerpt($post->content);
+
+        $discussionUrl = $this->url->to('forum')->route('discussion', ['id' => $discussion->id]);
+
+        $message = TemplateRenderer::render(
+            $this->template(),
+            [
+                '{title}' => $title,
+                '{tags}' => TemplateRenderer::discussionTags($discussion),
+                '{author}' => $authorName,
+                '{excerpt}' => $excerpt,
+                '{url}' => $discussionUrl,
+            ]
+        );
+
+        $this->notifier->dispatch($message);
+    }
+
+    private function template(): string
+    {
+        $template = $this->settings->get('tacraft-onebot-notify.new_post_template');
+
+        if (!is_string($template) || trim($template) === '') {
+            return MessageTemplates::NEW_POST;
+        }
+
+        return $template;
+    }
+}
